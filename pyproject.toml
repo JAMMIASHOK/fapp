@@ -3,14 +3,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 
-
 [project]
 name = "fapp"
-version = "1.0.0"
+dynamic = ["version"]
 authors = [
-  { name="wcfrobert", email="wcfrobert@gmail.com" },
+  { name="wcfrobert", email="temprobertdev@gmail.com" },
 ]
-description = "Frame Analysis Program in Python"
+description = "fapp (frame analysis program in python) is a simple, easy-to-use implementation of the direct stiffness method."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
@@ -18,6 +17,25 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dependencies = [
+    "numpy>=1.24",
+    "plotly>=5.13",
+    "scipy>=1.10",
+]
+keywords = [
+    "structural engineering",
+    "finite element",
+    "FEM",
+    "FEA",
+    "direct stiffness method",
+    "matrix analysis of structures"
+]
+
+[tool.hatch.version]
+path = "fapp/__init__.py"
+
+
+
 
 [project.urls]
 "Homepage" = "https://github.com/wcfrobert/fapp"
